@@ -32,7 +32,7 @@ const About = () => {
       <a
         href="https://drive.google.com/file/d/1yMlfRLyORuSMY7T75QcUXhvGvg10LZkO/view?usp=sharing"
         target="_blank"
-        className="text-text-white flex items-end gap-1 mt-18 hover:text-white"
+        className="text-text-white flex items-end gap-1 mt-18 hover:underline transition-all duration-200"
       >
         <p>View my Résumé</p>
         <Icon
