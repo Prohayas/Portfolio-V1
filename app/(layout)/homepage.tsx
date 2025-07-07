@@ -2,7 +2,11 @@ import DecryptedText from "@/components/DecryptedText";
 import Navbar from "@/components/Navbar";
 import React from "react";
 
-const Homepage = () => {
+type HomepageProps = {
+  activeSection: string; // Add this prop
+};
+
+const Homepage = ({ activeSection }: HomepageProps) => {
   return (
     <section
       id="home"
@@ -29,7 +33,7 @@ const Homepage = () => {
       </p>
 
       <div className="hidden lg:block">
-        <Navbar />
+        <Navbar activeSection={activeSection} />
       </div>
     </section>
   );

@@ -1,73 +1,42 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
+import Link from "next/link";
 
-const Navbar = () => {
-  const [activeSection, setActiveSection] = useState("about");
+const navLinks = [
+  { name: "About", href: "#about" },
+  { name: "Experience", href: "#experience" },
+  { name: "Contact", href: "#contact" },
+];
 
+type NavbarProps = {
+  activeSection: string;
+};
+const Navbar = ({ activeSection }: NavbarProps) => {
   return (
     <header className="mt-16">
       <nav>
         <ul className="flex flex-col text-text-brown gap-y-5 uppercase text-xs tracking-wider font-bold">
-          <li>
-            <a
-              href="#about"
-              className={`flex items-center gap-3 transition-colors duration-200 ${
-                activeSection === "about"
-                  ? "text-text-white"
-                  : "hover:text-text-hover"
-              }`}
-              onClick={() => setActiveSection("about")}
-            >
-              <span
-                className={`w-2 h-px transition-all duration-200 ${
-                  activeSection === "about"
-                    ? "bg-text-white w-8"
-                    : "bg-transparent"
+          {navLinks.map((link) => (
+            <li key={link.name}>
+              <Link
+                href={link.href}
+                className={`flex items-center gap-3 transition-colors duration-200 ${
+                  activeSection === link.href.substring(1)
+                    ? "text-text-white"
+                    : "hover:text-text-hover"
                 }`}
-              />
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#experience"
-              className={`flex items-center gap-3 transition-colors duration-200 ${
-                activeSection === "experience"
-                  ? "text-text-white"
-                  : "hover:text-text-hover"
-              }`}
-              onClick={() => setActiveSection("experience")}
-            >
-              <span
-                className={`w-2 h-px transition-all duration-200 ${
-                  activeSection === "experience"
-                    ? "bg-text-white w-8"
-                    : "bg-transparent"
-                }`}
-              />
-              Experience
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              className={`flex items-center gap-3 transition-colors duration-200 ${
-                activeSection === "contact"
-                  ? "text-text-white"
-                  : "hover:text-text-hover"
-              }`}
-              onClick={() => setActiveSection("contact")}
-            >
-              <span
-                className={`w-2 h-px transition-all duration-200 ${
-                  activeSection === "contact"
-                    ? "bg-text-white w-8"
-                    : "bg-transparent"
-                }`}
-              />
-              Contact
-            </a>
-          </li>
+              >
+                <span
+                  className={`w-2 h-px transition-all duration-200 ${
+                    activeSection === link.href.substring(1)
+                      ? "bg-text-white w-8"
+                      : "bg-transparent"
+                  }`}
+                />
+                {link.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
