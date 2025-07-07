@@ -1,7 +1,7 @@
 export const experienceData = [
   {
     dateFrom: "2023",
-    dateTo: "Jun 2025",
+    dateTo: "Mar 2025",
     title: "OriSys",
     company: "Capstone Project",
     position: "Full Stack Developer",
