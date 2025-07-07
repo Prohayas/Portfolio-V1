@@ -4,7 +4,10 @@ import React from "react";
 
 const Homepage = () => {
   return (
-    <div className="flex flex-col items-start gap-y-6 justify-start max-w-lg">
+    <section
+      id="home"
+      className="flex flex-col px-5 items-start gap-y-6 justify-start max-w-lg"
+    >
       <DecryptedText
         text="Melbienri Gabitan"
         className="text-4xl text-text-white font-bold"
@@ -19,14 +22,14 @@ const Homepage = () => {
       />
 
       <p className="text-text-brown">
-        Junior developer with hands-on experience building dynamic, responsive,
+        Junior developer with hands-on experience building dynamic, responsive,{" "}
         and scalable web solutions.
       </p>
 
       <div className="hidden lg:block">
         <Navbar />
       </div>
-    </div>
+    </section>
   );
 };
 

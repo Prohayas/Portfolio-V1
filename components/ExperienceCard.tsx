@@ -27,17 +27,17 @@ const ExperienceCard = ({
 }: ExperienceCardProps) => {
   return (
     <div
-      className={`flex hover:bg-[#FFFF]/5 transition-all ease-in-out p-5 hover:backdrop-blur-lg hover:rounded-lg hover: items-start gap-x-5 ${
+      className={`grid grid-cols-3 hover:bg-[#FFFF]/5 transition-all ease-in-out p-5 hover:backdrop-blur-lg hover:rounded-lg hover: items-start gap-x-5 ${
         clickable ? "cursor-pointer" : ""
       }`}
     >
       <p className="text-sm text-text-brown flex-10/12">
         {dateFrom} — {present ? "Present" : dateTo}
       </p>
-      <div className="flex flex-col">
+      <div className="flex flex-col col-span-2">
         <div className="flex items-end gap-x-2">
           <p className="text-text-white">
-            {title} — {company}
+            {title} {company && "— " + company}
           </p>
 
           {clickable && (

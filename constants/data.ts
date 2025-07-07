@@ -23,7 +23,7 @@ export const experienceData = [
     dateTo: "2023",
     title: "Freelance",
     description:
-      "Designed and developed full-stack web applications from the ground up using Laravel for backend architecture and RESTful APIs, and React with Tailwind CSS and TypeScript for responsive, modern user interfaces. Managed application state, routing, and UI components. Implemented authentication, CRUD operations, and containerized development environments using Docker. Utilized Git for version control.",
+      "Designed and developed full-stack web applications from the ground up using Laravel for backend, RESTful APIs, and React with Tailwind CSS and TypeScript for responsive, modern user interfaces. Managed application state, routing, and UI components. Implemented authentication, CRUD operations, and containerized development environments using Docker. Utilized Git for version control.",
     position: "Full Stack Developer",
     badges: [
       "Laravel",
@@ -40,8 +40,8 @@ export const experienceData = [
   {
     dateFrom: "2021",
     dateTo: "2022",
-    company: "Intern",
-    title: "OVPSDAS - Leyte Normal University",
+    company: "OVPSDAS - Leyte Normal University",
+    title: "Intern",
     position: "Full Stack Developer",
     description:
       "Designed and developed a full-stack Supply Inventory System for the Office of the Vice President for Student Development and Auxiliary Services - Leyte Normal University using Laravel.",

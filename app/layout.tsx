@@ -20,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} } antialiased`}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.variable} antialiased`}>
         <div className="relative grid grid-cols-1 px-3 lg:px-0 lg:grid-cols-2 mt-20 gap-4 max-w-7xl mx-auto">
           <div className="lg:sticky lg:top-20 lg:h-fit">
             <Homepage />
