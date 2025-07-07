@@ -6,7 +6,7 @@ export const experienceData = [
     company: "Capstone Project",
     position: "Full Stack Developer",
     description:
-      "Develop OriSys, a web-app that optimize the faculty research submission by automating points distribution and integrating Google Gemini for extracting relevant fields in a research document for the auto fill feature..",
+      "Develop OriSys, a web-app that optimize the faculty research submission by automating points distribution and integrating Google Gemini for extracting relevant fields in a research document for the auto fill feature.",
     badges: [
       "React",
       "Tailwind",

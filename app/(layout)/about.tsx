@@ -30,7 +30,7 @@ const About = () => {
       </p>
 
       <a
-        href="https://drive.google.com/file/d/1yMlfRLyORuSMY7T75QcUXhvGvg10LZkO/view?usp=sharing"
+        href="https://drive.google.com/file/d/12Or_VbCy3zkuCXhjKyddiGOucG7F-UkM/view?usp=sharing"
         target="_blank"
         className="text-text-white flex items-end gap-1 mt-18 group"
       >
