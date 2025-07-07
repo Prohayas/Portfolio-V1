@@ -116,8 +116,8 @@ const Contact = () => {
           <div
             className={`p-3 rounded mb-4 ${
               status.includes("successfully")
-                ? "bg-green-100 text-green-700 border border-green-300"
-                : "bg-red-100 text-red-700 border border-red-300"
+                ? "bg-text-white text-white border border-green-300"
+                : "bg-text-hover text-bg-gray-50 border border-red-300"
             }`}
           >
             {status}
@@ -131,9 +131,9 @@ const Contact = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className={`block py-2.5 px-0 w-full text-sm text-text-white bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 peer ${
+            className={`block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 peer ${
               errors.name
-                ? "border-red-500 focus:border-red-500"
+                ? "border-text-hover focus:border-text-hover"
                 : "border-text-brown focus:border-text-white"
             }`}
             placeholder=" "
@@ -142,14 +142,14 @@ const Contact = () => {
             htmlFor="name"
             className={`absolute text-sm duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto ${
               errors.name
-                ? "text-red-500 peer-focus:text-red-500"
+                ? "text-text-hover peer-focus:text-text-hover"
                 : "text-text-brown peer-focus:text-text-white"
             }`}
           >
             What is your name?
           </label>
           {errors.name && (
-            <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+            <p className="text-text-hover text-xs mt-1">{errors.name}</p>
           )}
         </div>
 
@@ -160,9 +160,9 @@ const Contact = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className={`block py-2.5 px-0 w-full text-sm text-text-white bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 peer ${
+            className={`block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 peer ${
               errors.email
-                ? "border-red-500 focus:border-red-500"
+                ? "border-text-hover focus:border-text-hover"
                 : "border-text-brown focus:border-text-white"
             }`}
             placeholder=" "
@@ -171,14 +171,14 @@ const Contact = () => {
             htmlFor="email"
             className={`absolute text-sm duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto ${
               errors.email
-                ? "text-red-500 peer-focus:text-red-500"
+                ? "text-text-hover peer-focus:text-text-hover"
                 : "text-text-brown peer-focus:text-text-white"
             }`}
           >
             Your email
           </label>
           {errors.email && (
-            <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+            <p className="text-text-hover text-xs mt-1">{errors.email}</p>
           )}
         </div>
 
@@ -189,9 +189,9 @@ const Contact = () => {
             value={formData.message}
             onChange={handleChange}
             required
-            className={`block py-2.5 px-0 w-full text-sm text-text-white bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 peer ${
+            className={`block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 peer ${
               errors.message
-                ? "border-red-500 focus:border-red-500"
+                ? "border-text-hover focus:border-text-hover"
                 : "border-text-brown focus:border-text-white"
             }`}
             placeholder=" "
@@ -200,14 +200,14 @@ const Contact = () => {
             htmlFor="message"
             className={`absolute text-sm duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto ${
               errors.message
-                ? "text-red-500 peer-focus:text-red-500"
+                ? "text-text-hover peer-focus:text-text-hover"
                 : "text-text-brown peer-focus:text-text-white"
             }`}
           >
             Your message
           </label>
           {errors.message && (
-            <p className="text-red-500 text-xs mt-1">{errors.message}</p>
+            <p className="text-text-hover text-xs mt-1">{errors.message}</p>
           )}
         </div>
 
@@ -219,10 +219,10 @@ const Contact = () => {
           <button
             type="submit"
             disabled={isLoading}
-            className={`px-6 py-2 rounded-full cursor-pointer transition-all ease-in-out ${
+            className={`px-6 py-2 rounded-full font-medium cursor-pointer transition-all ease-in-out ${
               isLoading
                 ? "bg-gray-400 text-gray-600 cursor-not-allowed"
-                : "bg-text-white text-bg-gray-50 hover:bg-text-white hover:text-text-brown"
+                : "bg-text-white text-bg-gray-50 hover:bg-text-hover hover:text-white"
             }`}
           >
             {isLoading ? "Sending..." : "Send"}
@@ -231,8 +231,10 @@ const Contact = () => {
       </form>
 
       <p className="text-text-brown font-light text-sm w-full mt-5 mb-10">
-        Designed in Figma and built with NextJS and Tailwind CSS by yours truly,
-        deployed in Vercel. 
+        Designed in<span className="text-text-hover font-bold"> Figma </span>
+        and built with <span className="text-text-white font-bold">NextJS</span>
+         and <span className="text-text-white font-bold">Tailwind CSS</span> by
+        yours truly.
       </p>
     </section>
   );

@@ -12,12 +12,14 @@ const Homepage = () => {
         text="Melbienri Gabitan"
         className="text-4xl text-text-white font-bold"
         animateOn="view"
+        speed={100}
         animate
       />
       <DecryptedText
         text="Full Stack Web Developer"
         className="text-2xl text-text-white font-semibold"
         animateOn="view"
+        speed={100}
         animate
       />
 

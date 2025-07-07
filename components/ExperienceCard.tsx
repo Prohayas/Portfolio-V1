@@ -27,7 +27,7 @@ const ExperienceCard = ({
 }: ExperienceCardProps) => {
   return (
     <div
-      className={`grid grid-cols-3 hover:bg-[#FFFF]/5 transition-all ease-in-out p-5 hover:backdrop-blur-lg hover:rounded-lg hover: items-start gap-x-5 ${
+      className={`grid grid-cols-3 group hover:bg-[#FFFF]/5 transition-all ease-in-out p-5 hover:rounded-lg items-start gap-x-5 ${
         clickable ? "cursor-pointer" : ""
       }`}
     >
@@ -36,12 +36,15 @@ const ExperienceCard = ({
       </p>
       <div className="flex flex-col col-span-2">
         <div className="flex items-end gap-x-2">
-          <p className="text-text-white">
+          <p className="text-text-white group-hover:text-text-hover">
             {title} {company && "— " + company}
           </p>
 
           {clickable && (
-            <Icon icon="iconamoon:arrow-top-right-1" className="size-5" />
+            <Icon
+              icon="iconamoon:arrow-top-right-1"
+              className="size-5  text-text-white group-hover:text-text-hover transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+            />
           )}
         </div>
         <p className="mt-2 text-sm text-text-brown">{position}</p>

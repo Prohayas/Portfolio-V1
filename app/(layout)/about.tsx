@@ -32,12 +32,14 @@ const About = () => {
       <a
         href="https://drive.google.com/file/d/1yMlfRLyORuSMY7T75QcUXhvGvg10LZkO/view?usp=sharing"
         target="_blank"
-        className="text-text-white flex items-end gap-1 mt-18 hover:underline transition-all duration-200"
+        className="text-text-white flex items-end gap-1 mt-18 group"
       >
-        <p>View my Résumé</p>
+        <p className="group-hover:underline hover:text-text-hover">
+          View my Résumé
+        </p>
         <Icon
           icon="iconamoon:arrow-top-right-1"
-          className="size-5 text-text-white"
+          className="size-5 cursor-pointer transition-transform group-hover:text-text-hover group-hover:translate-x-1 group-hover:-translate-y-1"
         />
       </a>
     </section>

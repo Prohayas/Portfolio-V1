@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-text-white: #f5f5f5;
-  --color-bg-gray-50: #333333;
-  --color-text-brown: #bdbdbd;
-  --color-text-hover: #666666;
+  --color-text-white: #00ffe0;
+  --color-bg-gray-50: #121212;
+  --color-text-brown: #b3b3b3;
+  --color-text-hover: #ff3cac;
 }
 
 body {

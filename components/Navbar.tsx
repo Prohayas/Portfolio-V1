@@ -14,7 +14,7 @@ const Navbar = () => {
               className={`flex items-center gap-3 transition-colors duration-200 ${
                 activeSection === "about"
                   ? "text-text-white"
-                  : "hover:text-text-white"
+                  : "hover:text-text-hover"
               }`}
               onClick={() => setActiveSection("about")}
             >
@@ -34,7 +34,7 @@ const Navbar = () => {
               className={`flex items-center gap-3 transition-colors duration-200 ${
                 activeSection === "experience"
                   ? "text-text-white"
-                  : "hover:text-text-white"
+                  : "hover:text-text-hover"
               }`}
               onClick={() => setActiveSection("experience")}
             >
@@ -54,7 +54,7 @@ const Navbar = () => {
               className={`flex items-center gap-3 transition-colors duration-200 ${
                 activeSection === "contact"
                   ? "text-text-white"
-                  : "hover:text-text-white"
+                  : "hover:text-text-hover"
               }`}
               onClick={() => setActiveSection("contact")}
             >
