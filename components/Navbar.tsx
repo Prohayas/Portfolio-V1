@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import FadeContent from "./FadeContent";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -15,28 +16,36 @@ const Navbar = ({ activeSection }: NavbarProps) => {
   return (
     <header className="mt-16">
       <nav>
-        <ul className="flex flex-col text-text-brown gap-y-5 uppercase text-xs tracking-wider font-bold">
-          {navLinks.map((link) => (
-            <li key={link.name}>
-              <Link
-                href={link.href}
-                className={`flex items-center gap-3 transition-colors duration-200 ${
-                  activeSection === link.href.substring(1)
-                    ? "text-text-white"
-                    : "hover:text-text-hover"
-                }`}
-              >
-                <span
-                  className={`w-2 h-px transition-all duration-200 ${
+        <ul>
+          <FadeContent
+            duration={1000}
+            easing="ease-in-out"
+            initialOpacity={0}
+            delay={100}
+            className="flex flex-col text-text-brown gap-y-5 uppercase text-xs tracking-wider font-bold"
+          >
+            {navLinks.map((link) => (
+              <li key={link.name}>
+                <Link
+                  href={link.href}
+                  className={`flex items-center gap-3 transition-colors duration-200 ${
                     activeSection === link.href.substring(1)
-                      ? "bg-text-white w-8"
-                      : "bg-transparent"
+                      ? "text-text-white"
+                      : "hover:text-text-hover"
                   }`}
-                />
-                {link.name}
-              </Link>
-            </li>
-          ))}
+                >
+                  <span
+                    className={`w-2 h-px transition-all duration-200 ${
+                      activeSection === link.href.substring(1)
+                        ? "bg-text-white w-8"
+                        : "bg-transparent"
+                    }`}
+                  />
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </FadeContent>
         </ul>
       </nav>
     </header>

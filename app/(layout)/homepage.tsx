@@ -1,3 +1,4 @@
+import BlurText from "@/components/BlurText";
 import DecryptedText from "@/components/DecryptedText";
 import Navbar from "@/components/Navbar";
 import React from "react";
@@ -16,6 +17,7 @@ const Homepage = ({ activeSection }: HomepageProps) => {
         text="Melbienri Gabitan"
         className="text-4xl text-text-white font-bold"
         animateOn="view"
+        sequential
         speed={100}
         animate
       />
@@ -23,14 +25,18 @@ const Homepage = ({ activeSection }: HomepageProps) => {
         text="Full Stack Web Developer"
         className="text-2xl text-text-white font-semibold"
         animateOn="view"
+        sequential
         speed={100}
         animate
       />
 
-      <p className="text-text-brown">
-        Junior developer with hands-on experience building dynamic, responsive,{" "}
-        and scalable web solutions.
-      </p>
+      <BlurText
+        animateBy="words"
+        text="Junior developer with hands-on experience building dynamic, responsive, and scalable web solutions."
+        direction="bottom"
+        delay={150}
+        className="text-text-brown"
+      />
 
       <div className="hidden lg:block">
         <Navbar activeSection={activeSection} />
