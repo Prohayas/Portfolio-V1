@@ -13,8 +13,8 @@ const About = () => {
       <FadeContent>
         <p className="text-text-brown text-lg font-light eading-relaxed">
           I&#39;m a <strong>junior</strong> full stack developer passionate
-          about building clean, fast, and accessible web applications. My main
-          focus is crafting full-featured apps using technologies like{" "}
+          about building dynamic, and scalable web applications. My main focus
+          is crafting full-featured apps using technologies like{" "}
           <strong>Laravel, React, and Tailwind CSS</strong>.
         </p>
         <p className="text-text-brown text-lg font-light eading-relaxed mt-5">

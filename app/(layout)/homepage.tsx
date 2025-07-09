@@ -28,7 +28,7 @@ const Homepage = () => {
 
       <BlurText
         animateBy="words"
-        text="Junior developer with hands-on experience building dynamic, responsive, and scalable web solutions."
+        text="Junior developer with hands-on experience building dynamic, responsive, and scalable web applications."
         direction="bottom"
         delay={150}
         className="text-text-brown"
