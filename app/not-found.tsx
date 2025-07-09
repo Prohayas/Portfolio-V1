@@ -1,20 +1,20 @@
 "use client";
 
-import FuzzyText from "@/components/FuzzyText";
+import DecryptedText from "@/components/DecryptedText";
 import React from "react";
 
 const notFound = () => {
   return (
-    <div className="flex justify-center items-center h-screen w-full">
-      <FuzzyText
-        color="#ff3cac"
-        baseIntensity={0.1}
-        hoverIntensity={0.2}
-        fontSize={72}
-      >
-        404 | Page not found.
-      </FuzzyText>
-    </div>
+    <main className="relative flex justify-center items-center min-h-screen px-6 lg:px-8">
+      <DecryptedText
+        className="text-2xl md:text-5xl font-bold text-text-hover"
+        text="404 | Page not found."
+        animateOn="view"
+        animate
+        sequential
+        speed={100}
+      />
+    </main>
   );
 };
 
