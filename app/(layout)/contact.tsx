@@ -71,7 +71,13 @@ const Contact = () => {
     e.preventDefault();
     setStatus("");
 
-    if (!validateForm()) return;
+    if (validateForm()) {
+      setStatus("Please fix the errors below.");
+      setTimeout(() => {
+        setStatus("");
+      }, 5000);
+      return;
+    }
 
     setIsLoading(true);
 
@@ -92,10 +98,20 @@ const Contact = () => {
         setStatus("Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
         setErrors({});
+
+        // Auto-dismiss success message after 4 seconds
+        setTimeout(() => {
+          setStatus("");
+        }, 4000);
       }
     } catch (error) {
       console.error("EmailJS error:", error);
       setStatus("Failed to send message. Please try again.");
+
+      // Auto-dismiss error message after 5 seconds
+      setTimeout(() => {
+        setStatus("");
+      }, 5000);
     } finally {
       setIsLoading(false);
     }

@@ -3,15 +3,11 @@ import DecryptedText from "@/components/DecryptedText";
 import Navbar from "@/components/Navbar";
 import React from "react";
 
-type HomepageProps = {
-  activeSection: string; // Add this prop
-};
-
-const Homepage = ({ activeSection }: HomepageProps) => {
+const Homepage = () => {
   return (
     <section
       id="home"
-      className="flex flex-col px-5 items-start gap-y-6 justify-start max-w-lg"
+      className="flex flex-col px-5 items-start gap-y-4 justify-start max-w-lg"
     >
       <DecryptedText
         text="Melbienri Gabitan"
@@ -39,7 +35,7 @@ const Homepage = ({ activeSection }: HomepageProps) => {
       />
 
       <div className="hidden lg:block">
-        <Navbar activeSection={activeSection} />
+        <Navbar />
       </div>
     </section>
   );

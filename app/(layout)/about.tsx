@@ -22,7 +22,7 @@ const About = () => {
           <strong> Office of the Research, Innovation, and Extension </strong>{" "}
           in our{" "}
           <a href="https://www.lnu.edu.ph/" target="_blank">
-            <strong className="decoration-dotted underline hover:text-text-white">
+            <strong className="decoration-dotted underline text-text-white hover:text-text-hover">
               university
             </strong>
           </a>{" "}
