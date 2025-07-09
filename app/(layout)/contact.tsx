@@ -116,8 +116,8 @@ const Contact = () => {
           <div
             className={`p-3 rounded mb-4 ${
               status.includes("successfully")
-                ? "bg-text-white text-white border border-green-300"
-                : "bg-text-hover text-bg-gray-50 border border-red-300"
+                ? "bg-text-white text-bg-gray-50 border "
+                : "bg-text-hover text-bg-gray-50 border "
             }`}
           >
             {status}
