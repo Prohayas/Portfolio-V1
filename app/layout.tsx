@@ -17,7 +17,6 @@ export default function RootLayout({
       <head>
         <Script
           src="https://cdn.pagesense.io/js/900810103/ace1cf6333294aa1b473b15278782288.js"
-          strategy="afterInteractive"
         />
       </head>
       <body className={`${inter.variable} antialiased`}>
