@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -13,10 +14,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <Script
+          src="https://cdn.pagesense.io/js/900810103/ace1cf6333294aa1b473b15278782288.js"
+          strategy="afterInteractive"
+        />
+      </head>
       <body className={`${inter.variable} antialiased`}>
         <main>{children}</main>
       </body>
-      <script src="https://cdn.pagesense.io/js/900810103/ace1cf6333294aa1b473b15278782288.js"></script>
     </html>
   );
 }
