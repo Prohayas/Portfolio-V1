@@ -15,7 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <Script id="zoho-init" strategy="beforeInteractive">
+         <Script id="zoho-init" strategy="beforeInteractive">
+        {`
           window.$zoho = window.$zoho || {};
           $zoho.salesiq = $zoho.salesiq || { ready: function() {} };
         `}
