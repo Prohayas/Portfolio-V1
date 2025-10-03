@@ -24,6 +24,7 @@ export default function RootLayout({
 
       {/* Load the Zoho SalesIQ widget */}
       <Script
+        id="zsiqscript"
         src="https://salesiq.zohopublic.com/widget?wc=siq3cc8b17408ef3c43d8f52dac1f0f5c99"
         strategy="afterInteractive"
       />
