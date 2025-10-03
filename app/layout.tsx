@@ -22,7 +22,7 @@ export default function RootLayout({
           window.$zoho = window.$zoho || {};
           $zoho.salesiq = $zoho.salesiq || { ready: function() {} };
         `}</Script>
-        <Script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq3cc8b17408ef3c43d8f52dac1f0f5c99" defer></Script>
+        <Script src="https://salesiq.zohopublic.com/widget?wc=siq3cc8b17408ef3c43d8f52dac1f0f5c99" defer></Script>
       </head>
       <body className={`${inter.variable} antialiased`}>
         <main>{children}</main>
