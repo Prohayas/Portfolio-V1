@@ -15,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <Script src="https://cdn.pagesense.io/js/905654381/be633f7456c34c24a8bc91aceb6d81d6.js"></Script>
          <Script id="zoho-init" strategy="beforeInteractive">
         {`
           window.$zoho = window.$zoho || {};
